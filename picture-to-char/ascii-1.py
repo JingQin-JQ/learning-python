@@ -31,24 +31,20 @@ a=size.split('x')
 width=int(a[0]) if size else 40
 height=int(a[1]) if size else 40
 
-print  "width", width
-print "height", height 
-print "size", size
+
 
 im=Image.open(picture_name)
 
 im=im.resize((width,height),Image.NEAREST)
-
-print im.size
 
 txt=''
 
 
 for i in range(height):
     for j in range(width):
-        print i, j
+      
         txt+=getstr(*im.getpixel((j,i)))
-        print im.getpixel((j,i))
+       
     txt+='\n'
 
 print txt
