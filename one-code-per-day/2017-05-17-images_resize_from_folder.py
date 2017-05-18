@@ -23,7 +23,6 @@ def run(path_file): #get all pictures from folder
                 process_image(img_file,os.path.splitext(name),path)
 
 def process_image(img,name,path): # resize pics to 640*1136(or smaller)
-    img_w,img_h = img.size
     rate = max(img.size[0]/640.0 if img.size[0] > 640 else 0, img.size[1]/1136.0 if img.size[1] > 1136 else 0)
     # get a rate for resize
     if rate:
