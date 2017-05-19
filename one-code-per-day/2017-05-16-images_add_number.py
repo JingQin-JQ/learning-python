@@ -15,6 +15,11 @@ import re
 
 
 def add_number(path_file):
+    '''
+    Get a file with its path as arguments of function "add_number",
+     use draw.txt to add a txt on to the image, 
+     and save the new image to the same location.
+     '''
     im = Image.open(path_file)
     
     pattern = re.compile('(.*\/).*')
